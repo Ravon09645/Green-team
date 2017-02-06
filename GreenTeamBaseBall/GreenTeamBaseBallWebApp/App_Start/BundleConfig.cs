@@ -8,6 +8,21 @@ namespace GreenTeamBaseBallWebApp
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/alljsbase")
+
+                       .Include("~/Scripts/angular.js")
+                       .Include("~/Scripts/*.js")
+            .IncludeDirectory("~/Scripts/angular-ui/", "*.js", true)
+            
+                      .Include(
+                         "~/app/app.js",
+                         "~/app/shared/*.js"
+                      )
+                     .Include(
+                        "~/app/home/*.js"
+                     )
+                       );
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
