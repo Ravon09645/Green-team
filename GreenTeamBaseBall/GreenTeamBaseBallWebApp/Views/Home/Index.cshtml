@@ -1,10 +1,30 @@
-﻿<div ng-app="greenbaseball">
+﻿<div ng-app="Welcome to GreenTeamBaseball">
     <div>
+
+
         <div class="btn-group">
             <label class="btn btn-primary" btn-radio="Home"><a style="color: white" ui-sref=".homepage">Home</a></label>
             <label class="btn btn-primary" btn-radio="Login"><a style="color: white" ui-sref=".login">Login</a></label>
+            
         </div>
+        <p>
+            Welcome to Green Team Baseball Team!
+        </p>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.Ao7J-hpq2DKH4_EpRHnMOgEsDH&pid=15.1&P=0&w=260&h=174"
+             alt="Baseball"
+             style="width:200px;height:200px" />
     </div>
+
+    <div>
+        <input type="text" ng-model="vm.usertemplate.userusername" placeholder="Username">
+        <input type="text" ng-model="vm.password" placeholder="Password">
+        <button ng-click="vm.gtbbservice.userlogin(vm.password)">Submit</button>
+        <span>
+            @*--/*@
+            @*{{vm.usertemplate.sessionid}}*@
+        </span>
+    </div>
+
         <div ui-view>
         </div>
     </div>
